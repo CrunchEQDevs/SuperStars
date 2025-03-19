@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+  <title>SuperStars</title>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            customDarkTheme: '#1D2021',
+            customBlue: '#2600F8',
+            customCard: '#FAFDFF',
+            customBlack: '#343435',
+            customOrange: '#FB7300',
+            customGrey: '#898888',
+            customLightBlue: '#E8F5FF',
+            customSkyBlue: '#F2F9FF',
+            backcard: '#121212',
+            backsection: '#1D2021',
+          },
+          backgroundImage: {
+            'bglight': "url('assets/BG.jpg')",
+            'fundocard': "url('assets/vectorcard.png')",
+            'bgdark': "url('assets/BGDARK.png')",
+            'fundocardark': "url('assets/vectordark.png')",
+            'fundoGrupoCardsDark': "url('./assets/Vector.svg')",
+            'fundoGrupoCards': "url('./assets/vector-center.png')",
+
+          },
+          variants: {
+            extend: {
+              backgroundImage: ['dark']
+            }
+          }
+        },
+      },
+      screens: {
+        'sm': '640px',
+        // => @media (min-width: 640px) { ... }
+  
+        'md': '768px',
+        // => @media (min-width: 768px) { ... }
+  
+        'lg': '1024px',
+        // => @media (min-width: 1024px) { ... }
+  
+        'xl': '1280px',
+        // => @media (min-width: 1280px) { ... }
+  
+        '2xl': '1536px',
+        // => @media (min-width: 1536px) { ... }
+      }
+    }
+  </script>
+</head>
+
+
+<body class="dark:bg-backsection">
+  <nav class="bg-white dark:bg-customBlack ">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="#" class="flex w-40 items-center space-x-3 rtl:space-x-reverse">
+        <img id="logoHeader" src="assets/logo-superstars.svg" class="h-8" alt="Logo" />
+      </a>
+      <button>
+        <img class="dark:bg-white md:block hidden bg-blue-800 rounded-md w-9/12" id="logoTheme"  src="" alt="">
+      </button>
+
+      <button data-collapse-toggle="navbar-default" type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden "
+        aria-controls="navbar-default" aria-expanded="false">
+        <img id="menu_orange" src="assets/menu_orange.png" class="h-8" alt="menu_orange" />
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+    
+        <ul class="font-medium flex  text-center flex-col gap-3 md:gap-0 p-4 md:p-5 mt-4  border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white  dark:bg-customBlack dark:border-gray-700">
+         <li  class="flex items-center justify-center">
+          <button class="flex justify-center pb-2">
+            <img class="dark:bg-white bg-blue-800 rounded-md w-9/12 md:hidden" id="navMobile"  src="" alt="">
+          </button>
+         </li>
+       
+
+          <li>
+            <a href="./index.html"
+              class=" block py-2 px-2 bg-orange-500 text-[18px] rounded-tr-lg rounded-bl-lg  text-white dark:text-blue"
+              aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="./index.html#aboutus"
+              class="block py-2 px-2 font-semibold text-[18px] text-customBlue hover:text-white dark:hover:text-white dark:text-customOrange hover:bg-customOrange rounded-tr-lg rounded-bl-lg md:border-0">About
+              us</a>
+          </li>
+          <!-- <li>
+            <a href="./blog.html"
+              class="block py-2 px-2 font-semibold text-[18px] text-customBlue hover:text-white dark:hover:text-white dark:text-customOrange hover:bg-customOrange rounded-tr-lg rounded-bl-lg md:border-0">Blog</a>
+          </li> -->
+
+          <li>
+            <a href="./standout.html"
+              class="block py-2 px-2 font-semibold text-[18px] text-customBlue hover:text-white dark:hover:text-white dark:text-customOrange hover:bg-customOrange rounded-tr-lg rounded-bl-lg md:border-0">Partners</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="p-12 text-center bg-bglight dark:bg-bgdark bg-cover bg-center dark:bg-backsection">
+
+
+    <div class="flex-col flex items-center justify-center lg:flex-row gap-10">
+
+      <img class="pt-3 lg:pt-0 w-4/5 md:w-1/2 pb-10 pl-2" src="assets/stars1.png" alt="">
+    </div>
+    <div class="flex-col flex items-center justify-center lg:flex-row ">
+      <div class="text md:flex-row ">
+        <h1 class="text-4xl xl:text-6xl font-bold text-customBlack dark:text-white">
+          We are
+        </h1>
+      </div>
+      <img class="pr-3 pl-3" src="assets/stars2.png" alt="">
+      <h1 id="element" class="text-4xl xl:text-6xl font-bold text-customBlack dark:text-white"></h1>
+    </div>
+    <div class="w-full flex items-center justify-center">
+        <p class="leading-8 lg:w-[55%] my-8 font-semibold  text-base  text-black dark:text-white">
+          A company created to bring the best for your Digital Marketing, we are Specialists in Digital iGaming Marketing
+          and our
+          main focus is to bring the best possible Sales Results through Creativity and Passion!
+        </p>
+    </div>
+
+
+    <a href="#contact"
+      class="md:mt-8 bg-customBlue rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3 dark:bg-orange-500 hover:bg-blue-700 transition duration-300">
+      Get in touch!
+    </a>
+
+  </div>
+
+  <div class="container m-auto w-full lg:w-9/12 flex items-center mt-10 mb-2 flex-col lg:flex-row justify-around dark:bg-backsection/90">
+    <header class="w-full grid grid-cols-1 md:grid-cols-2 pb-4 lg:px-0 px-8 place-items-center dark:bg-backsection ">
+      <div class="w-full">
+        <h2 class="h-full text-4xl xl:text-5xl md:w-8/12 lg:w-10/12 xl:w-7/12 font-bold text-customBlack dark:text-white text-center md:text-start ">
+          Our <span
+          class="text-customBlue dark:text-orange-500  ">mission </span> is to help you <span
+          class="text-orange-500">grow</span>.</h2>
+        </h2>
+      </div>
+      <div class="md:pt-0 md:pb-0 pb-4 pt-8 dark:text-white  text-center md:text-right w-full xl:w-2/3 md:w-10/12">
+        <p class="hidden 2xl:block">To empower our clients to thrive in the digital landscape by providing
+          innovative and tailored marketing solutions that drive growth, foster engagement, and deliver
+          exceptional results.</p>
+        <p class="2xl:hidden">To empower our clients to thrive in the digital landscape by providing innovative and
+          tailored marketing solutions that drive growth, foster engagement, and deliver exceptional results.</p>
+      </div>
+    </header>
+
+  </div>
+
+  <div
+     id="aboutus" class="flex justify-center items-center bg-white dark:bg-backsection/90 text-gray-800 py-12 relative overflow-hidden">
+    <img src="assets/VectorESQ.png" alt="Decorative Image"
+      class="w-40 lg:w-56 absolute left-0 md:top-1/2 transform -translate-y-1/2" />
+    <img src="assets/VectorDRT.png" alt="Decorative Image"
+      class="w-40 lg:w-56 absolute right-0 -bottom-56  md:top-1/2 transform -translate-y-1/2" />
+    <div class="max-w-6xl px-4 z-10 ">
+      <div class="flex flex-col justify-center items-start md:grid md:grid-cols-2 gap-5 z-10">
+        <div
+          class="bg-customCard dark:text-white dark:bg-backcard h-auto md:max-h-[1000px] max-w-[96%] rounded-tl-3xl drop-shadow-xl py-12 pl-10 pr-10 shadow-lg flex flex-col justify-start bg-fundocard dark:bg-fundocardark bg-right bg-contain bg-no-repeat"
+          style="border-bottom-right-radius: 50px;  border-top-left-radius:50px">
+          <h2 class="text-2xl font-bold pb-5 dark:text-white">Idea & Brainstorm</h2>
+          <p class="dark:text-white leading-8 limitText">At Superstars, we believe that every great venture begins with an idea. Our dedicated team is 
+            here to help you transform your ideas into actionable plans. Through collaborative brainstorming 
+            sessions and strategic planning, we work closely with you to refine and shape your vision into a 
+            concrete roadmap for success. Whether you're a budding entrepreneur or an established 
+            business, we're committed to bringing out the best in your plans and turning your ideas into 
+            reality. </p>
+          <button
+            class="mt-8 w-32 h-10 dark:text-white border-orange-500 text-black bg-transparent rounded-tr-lg rounded-bl-lg font-bold seeMoreButton"
+            style="border: 3px solid #FC6600;">
+            See More
+          </button>
+        </div>
+        <div
+          class="bg-customCard dark:text-white dark:bg-backcard h-auto md:max-h-[1000px] transition transition-height duration-500 ease-in-out max-w-[96%] rounded-tl-3xl drop-shadow-xl py-12 pl-10 pr-10 shadow-lg flex flex-col justify-start bg-fundocard dark:bg-fundocardark  bg-right bg-contain bg-no-repeat"
+          style="border-bottom-right-radius: 50px; border-top-left-radius:50px">
+          <h2 class="text-2xl font-bold pb-5">Design & Creativity</h2>
+          <p class="leading-8 limitText">At the heart of every successful project lies a captivating design and a touch of creativity. 
+            Superstars is dedicated to infusing originality and innovation into every aspect of your project. 
+            Our team of designers and creatives works tirelessly to craft visually stunning and memorable 
+            brands that stand out in today's competitive landscape. From logo design to brand identity 
+            development, we're here to ensure that your project makes a lasting impression and resonates 
+            with your target audience. 
+          </p>
+          <button
+            class="mt-8 w-32 h-10 dark:text-white border-orange-500 text-black bg-transparent rounded-tr-lg rounded-bl-lg font-bold seeMoreButton"
+            style="border: 3px solid #FC6600;">
+            See More
+          </button>
+        </div>
+        <div
+          class="bg-customCard dark:text-white dark:bg-backcard h-auto md:max-h-[1000px] max-w-[96%] rounded-tl-3xl drop-shadow-xl py-12 pl-10 pr-10 shadow-lg flex flex-col justify-start bg-fundocard dark:bg-fundocardark bg-right bg-contain bg-no-repeat"
+          style="border-bottom-right-radius: 50px; border-top-left-radius:50px">
+          <h2 class="text-2xl font-bold pb-5">Implementation</h2>
+          <p class="leading-8 limitText">Turning vision into action is where the real magic happens. At Superstars, we understand that 
+            implementation is the crucial step that transforms plans into tangible results. With meticulous 
+            attention to detail and a focus on execution excellence, our team is committed to bringing your 
+            brand and project to life. From organizing logistics to coordinating resources, we handle every 
+            aspect of implementation with precision and care, ensuring that your vision is realized on time 
+            and within budget. </p>
+          <button 
+            class="mt-8 w-32 h-10  dark:text-white border-orange-500 text-black bg-transparent rounded-tr-lg rounded-bl-lg font-bold seeMoreButton"
+            style="border: 3px solid #FC6600;">
+            See More
+          </button>
+        </div>
+        <div
+          class="bg-customCard dark:text-white dark:bg-backcard  h-auto md:max-h-[1000px] max-w-[96%] rounded-tl-3xl drop-shadow-xl py-12 pl-10 pr-10 shadow-lg flex flex-col justify-start bg-fundocard dark:bg-fundocardark bg-right bg-contain bg-no-repeat"
+          style="border-bottom-right-radius: 50px;  border-top-left-radius:50px">
+          <h2 class="text-2xl font-bold pb-5">Digital Marketing</h2>
+          <p class="leading-8 limitText">In today's digital age, effective marketing is essential for success. At Superstars, we specialize 
+            in crafting customized digital marketing strategies tailored to your brand and objectives. From 
+            social media management to search engine optimization, we leverage the latest tools and 
+            techniques to boost your online presence and drive meaningful engagement with your audience. 
+            Our experienced team works tirelessly to develop comprehensive marketing plans that 
+            maximize visibility, generate leads, and ultimately propel your brand to new heights. When it 
+            comes to promoting your brand in the digital sphere, trust Superstars to deliver results that 
+            exceed your expectations. </p>
+          <button
+            class="mt-8 w-32 h-10 dark:text-white border-orange-500 text-black bg-transparent rounded-tr-lg rounded-bl-lg font-bold seeMoreButton"
+            style="border: 3px solid #FC6600;">
+            See More
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="text-center py-10">
+    <div class="md:hidden bg-cover bg-no-repeat bg-center py-10"
+      style="background-image: url('assets/BannerMOBILE.png');">
+      <blockquote class="text-4xl text-white font-bold">
+        "Creativity comes from <br> a conflict of ideas."
+        <cite class="block text-xl text-gray-300 mt-6">- Donatella Versace</cite>
+      </blockquote>
+    </div>
+    <div class="hidden md:block bg-cover bg-no-repeat bg-center  py-10"
+      style="background-image: url('assets/Banner.png');">
+      <blockquote class="text-6xl text-white font-bold">
+        "Creativity comes from <br> a conflict of ideas."
+        <cite class="block text-lg text-gray-300 mt-6">- Donatella Versace</cite>
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- BLOG -->
+  <!-- <div class="flex m-auto flex-wrap justify-center items-center gap-4 p-5 w-10/12">
+    <div class="container m-auto bg-white dark:bg-backsection rounded-lg overflow-hidden">
+      <header class="w-full flex pb-20 place-items-center dark:bg-backsection ">
+        <div class="w-full">
+          <h2 class="h-full text-4xl xl:text-5xl md:w-8/12 lg:w-10/12 xl:w-8/12 font-bold text-customBlack dark:text-white text-center md:text-start ">
+            <span class="text-customBlue w-full dark:text-orange-500">Explore </span>and <span
+              class="text-orange-500">learn</span> enjoyable.
+          </h2>
+        </div>
+        <div class="dark:text-white text-center md:text-right w-full xl:w-2/3 md:w-10/12">
+          <p class="hidden 2xl:block">Step into the world of Superstarts and explore our blog, your</br> go-to
+            destination for insightful articles, helpful tips, and</br> inspiring stories.</p>
+          <p class="2xl:hidden">Step into the world of Superstarts and explore our blog, your go-to destination for
+            insightful articles, helpful tips, and inspiring stories.</p>
+        </div>
+      </header>
+      <div id="blogPostsHome" class=" ">
+          <div class="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden pb-[30px]">
+              <img src="./assets/Card-1.png" alt="Imagem 1" class="w-full md:w-1/3 object-cover">
+              <div class="p-6 flex-1">
+                  <h2 class="text-lg font-bold text-gray-900">Improve the Content Experience in Your Sportsbook in 7 Steps</h2>
+                  <p class="mt-2 text-gray-600 text-sm">In the competitive world of online sportsbooks, keeping your players engaged and loyal is 
+                     crucial for success. While offering competitive odds and a wide range of betting options is  essential,
+                      content plays a vital role in attracting and retaining players. A well-crafted content  strategy can....</p>
+                  <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-semibold">Read now</a>
+              </div>
+          </div>
+          <div class="flex flex-col md:flex-row items-start bg-white shadow-lg rounded-lg overflow-hidden pb-[30px]">
+            <img src="./assets/Card-2.png" alt="Imagem 2" class="w-full md:w-1/3 object-cover">
+              <div class="p-6 flex-1">
+                  <h2 class="text-lg font-bold text-gray-900">The Complete Guide to Understanding the iGaming Business</h2>
+                  <p class="mt-2 text-gray-600 text-sm">In the fast-paced world of online gaming, the iGaming industry has emerged as a 
+                    dynamic and lucrative sector, offering a wide range of gaming options to players worldwide. From online casinos and 
+                    sports betting platforms to virtual reality gaming experiences, the iGaming business encompasses a diverse array of...</p>
+                  <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-semibold">Read now</a>
+              </div>
+          </div>
+          <div class="flex flex-col md:flex-row items-start bg-white shadow-lg rounded-lg overflow-hidden pb-[30px]">
+            <img src="./assets/Card-3.png" alt="Imagem 3" class="w-full md:w-1/3 object-cover">
+              <div class="p-6 flex-1">
+                  <h2 class="text-lg font-bold text-gray-900">Social Media Selling in 2024: Strategies for Success</h2>
+                  <p class="mt-2 text-gray-600 text-sm">In the fast-paced digital landscape of 2024, social media has evolved into more than 
+                    just a platform for connecting with friends and sharing updates. It has become a powerful tool for businesses to engage 
+                    with customers and drive sales. Social media selling, also known as social selling, is the practice of...</p>
+                  <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-semibold">Read now</a>
+              </div>
+          </div>
+    </div>
+  </div> -->
+  
+  <!-- PARTNERS -->
+  <div class="container m-auto w-full lg:w-10/12 flex items-center mt-10 mb-2 flex-col lg:flex-row justify-around dark:bg-backsection">
+    <header class="w-full grid grid-cols-1 md:grid-cols-2 pb-4 lg:px-0 px-8 place-items-center dark:bg-backsection ">
+      <div class="w-full">
+        <h2 class="h-full text-4xl xl:text-5xl w-full font-bold text-customBlack dark:text-white text-center md:text-start ">
+          Stand <span class="text-orange-500">out</span>.</h2>
+        </h2>
+      </div>
+      <div class="md:pt-0 md:pb-0 pb-4 pt-8 dark:text-white text-center md:text-right w-full xl:w-2/3 md:w-10/12">
+        <p class="hidden 2xl:block">Discover what sets Superstars apart from the rest. With a proven track record of
+          expertise, dedication, and tangible results, we are committed to providing unparalleled service tailored to your
+          unique needs.</p>
+        <p class="2xl:hidden">Discover what sets Superstars apart from the rest. With a proven track record of expertise,
+          dedication, and tangible results, we are committed to providing unparalleled service tailored to your unique
+          needs.</p>
+      </div>
+    </header>
+
+  </div>
+
+
+  <div class="p-10 hidden md:block dark:bg-fundoGrupoCardsDark/90 bg-center bg-no-repeat bg-fundoGrupoCards">
+    <div class=" flex flex-col lg:flex-row items-center justify-center space-y-10 gap-5 ">
+      <!-- COLUNA ESQUERDA -->
+      <div class="flex flex-col gap-10">
+        <!-- SECÇÃO SAMBA BET -->
+        <div class="card space-left relative w-[366px] h-[266px] md:w-[476px] md:h-[321px] rounded-lg overflow-hidden shadow-lg">
+          <!-- Image with Hover Blur Effect -->
+          <img class="image absolute inset-0 w-full h-full object-cover transition duration-300 ease-in-out "
+            src="assets/Samba.png" alt="Card Image">
+          <!-- Text Overlay -->
+          <div
+            class="overlay md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-transparent transition-opacity duration-2000 ease-in-out opacity-0 hover:opacity-100 ">
+            <span class="text-white text-3xl font-bold">Sambabet</span>
+            <p class="text-white text-sm font-light">Users can expect agility. The platform is light and fast to navigate. Players will be able to create their registration in seconds, enjoy fast express withdrawal services, and enjoy high availability support. All this is coupled with the synergy of social networks, live player participation, creative and innovative content, an official fan community on social networks, invitations to events with our ambassador, and much more.</p>
+            <!-- <div class="flex text-white gap-5">
+              <div class="flex flex-col items-center">
+                <p>Games</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Sports</p>
+                <p class="font-bold">20+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Providers</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Events</p>
+                <p class="font-bold">4000+</p>
+              </div>
+            </div>  -->
+            <a href="./standout.html#sambabet"
+              class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+              See more
+            </a>
+          </div>
+        </div>
+        <!-- SECÇÃO BLZ BET -->
+        <div class="card space-left relative w-[366px] h-[266px] md:w-[476px] md:h-[321px] rounded-lg overflow-hidden shadow-lg ">
+          <!-- Image with Hover Blur Effect -->
+          <img class="image absolute inset-0 w-full h-full object-cover transition duration-300 ease-in-out hover:blur"
+            src="assets/blzbet.png" alt="Card Image">
+          <!-- Text Overlay -->
+          <div
+            class="overlay  md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-transparent transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100 ">
+            <span class="text-white text-3xl font-bold">Blz bets</span>
+            <p class="text-white text-sm font-light">Your Brazilian-inspired destination for online gaming and sports betting! Not your average platform—they are here to innovate and thrill. With daily promotions and a warm Brazilian welcome, live an unforgettable experience. A mobile-friendly site ensures you can play anytime, anywhere, with top-notch security every step of the way.</p>
+            <!-- <div class="flex text-white gap-5">
+              <div class="flex flex-col items-center">
+                <p>Games</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Sports</p>
+                <p class="font-bold">20+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Providers</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Events</p>
+                <p class="font-bold">4000+</p>
+              </div>
+            </div> -->
+            <a href="./standout.html#blzbets"
+              class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+              See more
+            </a>
+          </div>
+        </div>
+        <!-- SECÇÃO SAMBA SPINAREEL -->
+        <div class="card space-right relative w-[366px] h-[266px] md:w-[476px] md:h-[321px] rounded-lg overflow-hidden shadow-lg">
+          <!-- Image with Hover Blur Effect -->
+          <img class="image absolute inset-0 w-full h-full object-cover transition duration-300 ease-in-out hover:blur"
+            src="assets/spin.png" alt="Card Image">
+          <!-- Text Overlay -->
+          <div
+            class="overlay  md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-transparent transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100 ">
+            <span class="text-white text-3xl font-bold">Spinareel</span>
+            <p class="text-white text-sm font-light">Spinareel is your ultimate destination for maximum fun in the world of online pokies! Soon to be available to all Kiwis, Spinareel offers over 700 games, from the latest hits to timeless classics. We're dedicated to providing an unparalleled gaming experience, tailored specifically for pokie enthusiasts like you. Get ready to spin and win with Spinareel, where the excitement never stops!</p>
+            <!-- <div class="flex text-white gap-5">
+              <div class="flex flex-col items-center">
+                <p>Games</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Sports</p>
+                <p class="font-bold">20+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Providers</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Events</p>
+                <p class="font-bold">4000+</p>
+              </div>
+            </div> -->
+            <a href="./standout.html#spinareel"
+              class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+              See more
+            </a>
+          </div>
+        </div>
+        <!-- SECÇÃO MAHARAJA FORTUNE -->
+        <div class="card space-right relative w-[366px] h-[266px] md:w-[476px] md:h-[321px] rounded-lg overflow-hidden shadow-lg">
+          <!-- Image with Hover Blur Effect -->
+          <img class="image absolute inset-0 w-full h-full object-cover transition duration-300 ease-in-out hover:blur"
+            src="assets/maharajafortune.png" alt="Card Image">
+          <!-- Text Overlay -->
+          <div
+            class="overlay  md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-transparent transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100 ">
+            <span class="text-white text-3xl font-bold">Maharaja Fortune</span>
+            <p class="text-white text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <!-- <div class="flex text-white gap-5">
+              <div class="flex flex-col items-center">
+                <p>Games</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Sports</p>
+                <p class="font-bold">20+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Providers</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Events</p>
+                <p class="font-bold">4000+</p>
+              </div>
+            </div> -->
+            <a href="./standout.html"
+              class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+              See more
+            </a>
+          </div>
+        </div>
+        <!-- SECÇÃO PIX CASINO -->
+        <div class="card space-right relative w-[366px] h-[266px] md:w-[476px] md:h-[321px] rounded-lg overflow-hidden shadow-lg">
+          <!-- Image with Hover Blur Effect -->
+          <img class="image absolute inset-0 w-full h-full object-cover transition duration-300 ease-in-out hover:blur"
+            src="assets/pixcasino.png" alt="Card Image">
+          <!-- Text Overlay -->
+          <div
+            class="overlay  md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-transparent transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100 ">
+            <span class="text-white text-3xl font-bold">Pix Casino</span>
+            <p class="text-white text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <!-- <div class="flex text-white gap-5">
+              <div class="flex flex-col items-center">
+                <p>Games</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Sports</p>
+                <p class="font-bold">20+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Providers</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Events</p>
+                <p class="font-bold">4000+</p>
+              </div>
+            </div> -->
+            <a href="./standout.html"
+              class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+              See more
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- COLUNA DIREITA -->
+      <div class=" flex flex-col gap-10 pt-24">
+        <!-- SECÇÃO ACASINO -->
+        <div class="card space-last-card-right relative w-[366px] h-[266px] md:w-[476px] md:h-[321px] rounded-lg overflow-hidden shadow-lg">
+          <!-- Image with Hover Blur Effect -->
+          <img class="image absolute inset-0 w-full h-full object-cover transition duration-300 ease-in-out hover:blur"
+            src="assets/Acasino.png" alt="Card Image">
+          <!-- Text Overlay -->
+          <div
+            class="overlay  md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-transparent transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100 ">
+            <span class="text-white text-3xl font-bold">ACASINO</span>
+            <p class="text-white text-sm font-light">Safe and reliable, the site has security-related certifications and is being submitted to the inspection of one of the main certification authorities and most respected jurisdictions, Curaçao. It also aligns with responsible gaming and clear deposit policies for the safety and security of our players.</p>
+            <!-- <div class="flex text-white gap-5">
+              <div class="flex flex-col items-center">
+                <p>Games</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Sports</p>
+                <p class="font-bold">20+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Providers</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Events</p>
+                <p class="font-bold">4000+</p>
+              </div>
+            </div> -->
+            <a href="./standout.html"
+              class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+              See more
+            </a>
+          </div>
+        </div>
+        <!-- SECÇÃO MMA BET -->
+        <div class="card space-last-card relative w-[366px] h-[266px] md:w-[476px] md:h-[321px] rounded-lg overflow-hidden shadow-lg">
+          <!-- Image with Hover Blur Effect -->
+          <img class="image absolute inset-0 w-full h-full object-cover transition duration-300 ease-in-out hover:blur"
+            src="assets/mmabet.png" alt="Card Image">
+          <!-- Text Overlay -->
+          <div
+            class="overlay  md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-transparent transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100 ">
+            <span class="text-white text-3xl font-bold">MMA bet</span>
+            <p class="text-white text-sm font-light">MMAbet is your premier destination for MMA betting excitement! With a focus on delivering top-notch thrills to fight fans everywhere, MMAbet offers a wide range of betting options on all the biggest MMA events. From UFC showdowns to Bellator battles and beyond, we've got you covered with a diverse selection of bets to keep the adrenaline pumping.</p>
+            <!-- <div class="flex text-white gap-5">
+              <div class="flex flex-col items-center">
+                <p>Games</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Sports</p>
+                <p class="font-bold">20+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Providers</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Events</p>
+                <p class="font-bold">4000+</p>
+              </div>
+            </div> -->
+            <a href="./standout.html"
+              class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+              See more
+            </a>
+          </div>
+        </div>
+        <!-- SECÇÃO BET R9 -->
+        <div class="card space-right relative w-[366px] h-[266px] md:w-[476px] md:h-[321px] rounded-lg overflow-hidden shadow-lg">
+          <!-- Image with Hover Blur Effect -->
+          <img class="image absolute inset-0 w-full h-full object-cover transition duration-300 ease-in-out hover:blur"
+            src="assets/betr9.png" alt="Card Image">
+          <!-- Text Overlay -->
+          <div
+            class="overlay md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-transparent transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100 ">
+            <span class="text-white text-3xl font-bold">BETR9</span>
+            <p class="text-white text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <!-- <div class="flex text-white gap-5">
+              <div class="flex flex-col items-center">
+                <p>Games</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Sports</p>
+                <p class="font-bold">20+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Providers</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Events</p>
+                <p class="font-bold">4000+</p>
+              </div>
+            </div> -->
+            <a href="./standout.html"
+              class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+              See more
+            </a>
+          </div>
+        </div>
+        <!-- CARD PLAY NERO -->
+        <div class="card space-right relative w-[366px] h-[266px] md:w-[476px] md:h-[321px] rounded-lg overflow-hidden shadow-lg">
+          <!-- Image with Hover Blur Effect -->
+          <img class="image absolute inset-0 w-full h-full object-cover transition duration-300 ease-in-out hover:blur"
+            src="assets/playnero.png" alt="Card Image">
+          <!-- Text Overlay -->
+          <div
+            class="overlay  md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-transparent transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100 ">
+            <span class="text-white text-3xl font-bold">Play Nero</span>
+            <p class="text-white text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <!-- <div class="flex text-white gap-5">
+              <div class="flex flex-col items-center">
+                <p>Games</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Sports</p>
+                <p class="font-bold">20+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Providers</p>
+                <p class="font-bold">4000+</p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <p>Events</p>
+                <p class="font-bold">4000+</p>
+              </div>
+            </div> -->
+            <a href="./standout.html"
+              class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+              See more
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SECÇÃO CARD'S MOBILE -->
+  <div class="w-full mt-10 flex flex-col gap-5 block md:hidden">
+    <!-- SAMBA BET -->
+    <div class="p-3">
+      <div class="relative w-full h-80 rounded-3xl overflow-hidden shadow-lg">
+        <img class="image absolute inset-0 w-full h-80"
+          src="assets/Samba.png" alt="Card Image">
+        <div
+          class="overlay md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-black/70 transition-opacity duration-2000 ease-in-out opacity-0 hover:opacity-100 ">
+          <span class="text-white text-3xl font-bold">Samba Bet</span>
+          <p class="text-white text-sm font-light">Developed with user-friendliness and simplicity in mind casinomega exist for the next generation 
+            of players who are looking for fun above all.</p>
+          <div class="flex text-white gap-5">
+            <div class="flex flex-col items-center">
+              <p>Games</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Sports</p>
+              <p class="font-bold">20+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Providers</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Events</p>
+              <p class="font-bold">4000+</p>
+            </div>
+          </div> 
+          <a href="./standout.html#sambabet"
+            class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+            See more
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLZ BETS -->
+    <div class="p-3">
+      <div class="relative w-full h-80 rounded-3xl overflow-hidden shadow-lg">
+        <img class="image absolute inset-0 w-full h-80"
+          src="assets/blzbet.png" alt="Card Image">
+        <div
+          class="overlay md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-black/70 transition-opacity duration-2000 ease-in-out opacity-0 hover:opacity-100 ">
+          <span class="text-white text-3xl font-bold">BLZ BET</span>
+          <p class="text-white text-sm font-light">Developed with user-friendliness and simplicity in mind casinomega exist for the next generation
+             of players who are looking for fun above all.</p>
+          <div class="flex text-white gap-5">
+            <div class="flex flex-col items-center">
+              <p>Games</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Sports</p>
+              <p class="font-bold">20+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Providers</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Events</p>
+              <p class="font-bold">4000+</p>
+            </div>
+          </div> 
+          <a href="./standout.html#sambabet"
+            class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+            See more
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPINAREEL -->
+    <div class="p-3">
+      <div class="relative w-full h-80 rounded-3xl overflow-hidden shadow-lg">
+        <img class="image absolute inset-0 w-full h-80"
+          src="assets/spin.png" alt="Card Image">
+        <div
+          class="overlay md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-black/70 transition-opacity duration-2000 ease-in-out opacity-0 hover:opacity-100 ">
+          <span class="text-white text-3xl font-bold">SPINA REEL</span>
+          <p class="text-white text-sm font-light">Developed with user-friendliness and simplicity in mind casinomega exist for the next generation of players who are looking for fun above all.</p>
+          <div class="flex text-white gap-5">
+            <div class="flex flex-col items-center">
+              <p>Games</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Sports</p>
+              <p class="font-bold">20+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Providers</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Events</p>
+              <p class="font-bold">4000+</p>
+            </div>
+          </div> 
+          <a href="./standout.html#sambabet"
+            class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+            See more
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAHARAJA FORTUNE -->
+    <div class="p-3">
+      <div class="relative w-full h-80 rounded-3xl overflow-hidden shadow-lg">
+        <img class="image absolute inset-0 w-full h-80"
+          src="assets/maharajafortune.png" alt="Card Image">
+        <div
+          class="overlay md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-black/70 transition-opacity duration-2000 ease-in-out opacity-0 hover:opacity-100 ">
+          <span class="text-white text-3xl font-bold">MAHARAJA FORTUNE</span>
+          <p class="text-white text-sm font-light">Developed with user-friendliness and simplicity in mind casinomega exist for the next generation of players who are looking for fun above all.</p>
+          <div class="flex text-white gap-5">
+            <div class="flex flex-col items-center">
+              <p>Games</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Sports</p>
+              <p class="font-bold">20+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Providers</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Events</p>
+              <p class="font-bold">4000+</p>
+            </div>
+          </div> 
+          <a href="./standout.html#sambabet"
+            class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+            See more
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PIX CASINO -->
+    <div class="p-3">
+      <div class="relative w-full h-80 rounded-3xl overflow-hidden shadow-lg">
+        <img class="image absolute inset-0 w-full h-80"
+          src="assets/pixcasino.png" alt="Card Image">
+        <div
+          class="overlay md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-black/70 transition-opacity duration-2000 ease-in-out opacity-0 hover:opacity-100 ">
+          <span class="text-white text-3xl font-bold">PIX CASINO</span>
+          <p class="text-white text-sm font-light">Developed with user-friendliness and simplicity in mind casinomega exist for the next generation of players who are looking for fun above all.</p>
+          <div class="flex text-white gap-5">
+            <div class="flex flex-col items-center">
+              <p>Games</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Sports</p>
+              <p class="font-bold">20+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Providers</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Events</p>
+              <p class="font-bold">4000+</p>
+            </div>
+          </div> 
+          <a href="./standout.html#sambabet"
+            class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+            See more
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACASINO -->
+    <div class="p-3">
+      <div class="relative w-full h-80 rounded-3xl overflow-hidden shadow-lg">
+        <img class="image absolute inset-0 w-full h-80"
+          src="assets/Acasino.png" alt="Card Image">
+        <div
+          class="overlay md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-black/70 transition-opacity duration-2000 ease-in-out opacity-0 hover:opacity-100 ">
+          <span class="text-white text-3xl font-bold">ACASINO</span>
+          <p class="text-white text-sm font-light">Developed with user-friendliness and simplicity in mind casinomega exist for the next generation of players who are looking for fun above all.</p>
+          <div class="flex text-white gap-5">
+            <div class="flex flex-col items-center">
+              <p>Games</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Sports</p>
+              <p class="font-bold">20+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Providers</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Events</p>
+              <p class="font-bold">4000+</p>
+            </div>
+          </div> 
+          <a href="./standout.html#sambabet"
+            class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+            See more
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MMA BET -->
+    <div class="p-3">
+      <div class="relative w-full h-80 rounded-3xl overflow-hidden shadow-lg">
+        <img class="image absolute inset-0 w-full h-80"
+          src="assets/mmabet.png" alt="Card Image">
+        <div
+          class="overlay md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-black/70 transition-opacity duration-2000 ease-in-out opacity-0 hover:opacity-100 ">
+          <span class="text-white text-3xl font-bold">MMA BET</span>
+          <p class="text-white text-sm font-light">Developed with user-friendliness and simplicity in mind casinomega exist for the next generation of players who are looking for fun above all.</p>
+          <div class="flex text-white gap-5">
+            <div class="flex flex-col items-center">
+              <p>Games</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Sports</p>
+              <p class="font-bold">20+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Providers</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Events</p>
+              <p class="font-bold">4000+</p>
+            </div>
+          </div> 
+          <a href="./standout.html#sambabet"
+            class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+            See more
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BET R9 -->
+    <div class="p-3">
+      <div class="relative w-full h-80 rounded-3xl overflow-hidden shadow-lg">
+        <img class="image absolute inset-0 w-full h-80"
+          src="assets/betr9.png" alt="Card Image">
+        <div
+          class="overlay md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-black/70 transition-opacity duration-2000 ease-in-out opacity-0 hover:opacity-100 ">
+          <span class="text-white text-3xl font-bold">BET R9</span>
+          <p class="text-white text-sm font-light">Developed with user-friendliness and simplicity in mind casinomega exist for the next generation of players who are looking for fun above all.</p>
+          <div class="flex text-white gap-5">
+            <div class="flex flex-col items-center">
+              <p>Games</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Sports</p>
+              <p class="font-bold">20+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Providers</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Events</p>
+              <p class="font-bold">4000+</p>
+            </div>
+          </div> 
+          <a href="./standout.html#sambabet"
+            class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+            See more
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLAY NERO -->
+    <div class="p-3">
+      <div class="relative w-full h-80 rounded-3xl overflow-hidden shadow-lg">
+        <img class="image absolute inset-0 w-full h-80"
+          src="assets/playnero.png" alt="Card Image">
+        <div
+          class="overlay md:gap-3 gap-1 absolute inset-0 flex flex-col items-start p-10 justify-center bg-black/70 transition-opacity duration-2000 ease-in-out opacity-0 hover:opacity-100 ">
+          <span class="text-white text-3xl font-bold">PLAY NERO</span>
+          <p class="text-white text-sm font-light">Developed with user-friendliness and simplicity in mind casinomega exist for the next generation of players who are looking for fun above all.</p>
+          <div class="flex text-white gap-5">
+            <div class="flex flex-col items-center">
+              <p>Games</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Sports</p>
+              <p class="font-bold">20+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Providers</p>
+              <p class="font-bold">4000+</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <p>Events</p>
+              <p class="font-bold">4000+</p>
+            </div>
+          </div> 
+          <a href="./standout.html#sambabet"
+            class="mt-2 bg-orange-600 rounded-tr-lg rounded-bl-lg  text-white font-bold py-2 px-3  hover:bg-blue-700 transition duration-300">
+            See more
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FORMULÁRIO CONTACTO -->
+  <section id="contact" class="w-full flex items-center flex-col justify-center py-16 md:mt-0 p-3 md:pb-0">
+    <div class="w-full max-w-5xl container ">
+      <div class="flex w-full items-center justify-center xl:items-start xl:justify-start" >
+        <h2
+          class="md:text-6xl text-5xl font-bold xl:text-left text-center md:w-7/12 xl:w-6/12 text-black dark:text-white">
+          Ready to <span class="text-customBlue dark:text-orange-500 ">work </span> with us?</h2>
+      </div>
+      <div class=" bg-white dark:bg-backsection py-10 md:px-0 px-4 rounded-lg md:w-10/12 xl:w-full m-auto" id="formContainer">
+        <h1 class="text-customBlack text-3xl text-center md:text-start font-bold pb-8 dark:text-white">Message</h1>
+        <form id="contactForm" action="https://api.sheetmonkey.io/form/ie5qxK2La6NHtGnZBaWdYJ" class="grid grid-cols-2 gap-6" method="post">
+          <div class="col-span-2 lg:col-span-1">
+              <div class="flex flex-col">
+                  <label for="name" class="text-sm font-semibold text-gray-700 mb-2 dark:text-white">Name</label>
+                  <input type="text" id="name" name="name" class="border-0 border-b dark:bg-backsection border-gray-300 dark:text-white text-gray-700 p-2 focus:outline-none focus:border-customBlue" placeholder="Enter your name" required>
+              </div>
+          </div>
+          <div class="col-span-2 lg:col-span-1">
+              <div class="flex flex-col">
+                  <label for="email" class="text-sm font-semibold text-gray-700 mb-2 dark:text-white">Valid email</label>
+                  <input type="email" id="email" name="email" class="border-0 border-b dark:bg-backsection border-gray-300 dark:text-white text-gray-700 p-2 focus:outline-none focus:border-customBlue" placeholder="Enter a valid email address" required>
+              </div>
+          </div>
+          <div class="col-span-2">
+              <div class="flex flex-col">
+                  <label for="message" class="text-sm  font-semibold text-gray-700 mb-2 dark:text-white">Message</label>
+                  <textarea id="message" name="message" class="border-0 border-b md:h-52 h-24 dark:bg-backsection border-gray-300 dark:text-white text-gray-700 p-2 focus:outline-none focus:border-customBlue" placeholder="Enter your message" required></textarea>
+              </div>
+          </div>
+          <div class="col-span-2">
+              <button id="submitButton" type="submit" value="submit" class="mt-2 bg-customBlue dark:bg-orange-500 rounded-tr-lg rounded-bl-lg text-white font-bold py-2 px-3 hover:bg-blue-700 transition duration-300">Submit</button>
+          </div>
+      </form>
+      
+      </div>
+      <div id="successMessage" class="hidden md:my-10 mt-16 success-message">
+
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 place-items-center bg-white dark:bg-backsection rounded-lg w-full md:max-w-7xl">
+            <div class="flex flex-col items-start">
+                <h2
+                    class="text-customBlack dark:text-white text-xl md:text-3xl font-bold pb-3 md:pb-8">Sent
+                    with <span
+                        class="text-customBlue dark:text-orange-500">success</span>
+                </h2>
+                <p
+                    class="text-customBlack dark:text-white text-start font-medium md:text-xl text-base">We
+                    will get back to you as soon as possible, thank
+                    you!</p>
+            </div>
+
+            <div class="w-1/2 flex items-center">
+                <script
+                    src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                    type="module"></script>
+
+                <dotlottie-player
+                    src="https://lottie.host/6ccc4efc-ea38-46da-bef1-07ac384f6ef8/n3eejJfLyu.json"
+                    background="transparent" speed="0.7"
+                    style="width: 200px; height: 200px;" loop
+                    autoplay></dotlottie-player>
+            </div>
+        </div>
+
+    </div>
+
+  </section>
+
+<footer
+  class="bg-white dark:bg-customDarkTheme px-10 pt-5 pb-10 md:py-14 flex items-center flex-col md:flex-row justify-around ">
+  <div class="flex flex-col items-center gap-3">
+      <img id="logoFooter"
+          src="assets/logo-superstars.svg"
+          class="h-8 w-2/3" alt=" Logo" />
+      <span class="text-base text-customBlack dark:text-white">© 2024
+          All rights reserved</span>
+  </div>
+  <div class="flex flex-col gap-3 mt-3 items-center ">
+      <span
+          class="text-3xl font-bold text-customBlack dark:text-white">Follow
+          us</span>
+      <a target="_blank" id="link-linkedin"
+          href="https://www.linkedin.com/company/superstars-entertainment/">
+          <img src="/assets/linkedin-dark.svg" alt>
+      </a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+  <script>
+
+    document.getElementById('contactForm').addEventListener('submit', async function(event) {
+      event.preventDefault();
+      try {
+          const response = await fetch(this.action, {
+              method: this.method,
+              body: new FormData(this)
+          });
+          if (response.ok) {
+              document.getElementById('formContainer').classList.add('hidden');
+              document.getElementById('successMessage').classList.remove('hidden');
+              successMessage.classList.add('success-message');
+          } else {
+              throw new Error('Erro ao enviar o formulário');
+          }
+      } catch (error) {
+          console.error('Erro:', error);
+      }
+  });
+  
+    function atualizarImagemTema() {
+      const imagemLinkedin = document.querySelector('#link-linkedin img');
+      const logoTheme = document.getElementById('logoTheme');
+      const ThemeNav = document.getElementById('navMobile');
+      const isDarkMode = document.documentElement.classList.contains('dark');
+      const logoHeader = document.getElementById('logoHeader');
+      const logoFooter = document.getElementById('logoFooter');
+      const menu_orange = document.getElementById('menu_orange');
+
+      if (isDarkMode) {
+          imagemLinkedin.src = 'assets/linkedin-light.svg';
+          logoHeader.src = 'assets/logo-superstars-white.svg';
+          logoTheme.src = 'assets/white.svg';
+          logoFooter.src = 'assets/logo-superstars-orange.svg';
+          menu_orange.src = 'assets/menu_orange.png';
+          ThemeNav.src = 'assets/white.svg';
+      } else {
+          imagemLinkedin.src = 'assets/linkedin-dark.svg';
+          logoHeader.src = 'assets/logo-superstars.svg';
+          logoTheme.src = 'assets/dark.svg';
+          logoFooter.src = 'assets/logo-superstars.svg';
+          menu_orange.src = 'assets/menu_blue.png';
+          ThemeNav.src = 'assets/dark.svg';
+      }
+    }
+
+    darkMode();
+    isDarkModeActive();
+
+    function getCachedPosts() {
+      const cachedData = localStorage.getItem('cached_posts');
+      return cachedData ? JSON.parse(cachedData) : null;
+  }
+
+  // Armazena os dados na variável cachedData caso existam dados no local storage. Se nao, faz uma nova requisição à API.
+  cachedData2 = getCachedPosts();
+
+  function displayPostTrending() {
+    try{
+
+        let currentPosts = 0;
+      
+        function showMorePosts() {
+            let additionalPosts = 3; 
+            for (let i = currentPosts; i < currentPosts + additionalPosts && i < cachedData2.length; i++) {
+                const post = cachedData2[i];
+                const container = document.createElement('div');
+                container.classList.add('rounded-lg', 'grid', 'xl:grid-cols-2', 'w-full', '!items-center', '!justify-center', 'pb-10', 'xl:place-items-start', 'place-items-center' );
+                
+
+                const imageElement = document.createElement('img');
+                imageElement.id = 'photoPost';
+                imageElement.classList.add('xl:w-11/12', 'w-full', 'rounded-2xl', 'h-72', 'md:h-96', 'object-cover');
+                imageElement.src = post.yoast_head_json.og_image[0].url;
+                imageElement.alt = 'news image';
+                container.appendChild(imageElement);
+                
+                const textContainer = document.createElement('div');
+                textContainer.classList.add( 'h-full', 'flex', 'flex-col', 'justify-around', 'w-full', 'xl:w-11/12');
+                const titleElement = document.createElement('h3');
+                titleElement.id = 'titlePost';
+                titleElement.classList.add('font-bold', 'text-black', 'text-lg', 'lg:text-xl','md:text-xl' ,'p-2', 'dark:text-white');
+                titleElement.textContent = post.yoast_head_json.title.replace(/\u00A0/g, ' ');
+                textContainer.appendChild(titleElement);
+
+                const divDescription = document.createElement('div');
+                divDescription.classList.add('w-full' ,'h-auto', 'flex', 'items-start', 'p-2', 'xl:py-6','text-justify', 'py-4');
+                const descriptionElement = document.createElement('p');
+                descriptionElement.id = 'descriptionPost';
+                descriptionElement.classList.add('text-black', 'text-base', 'dark:text-white', 'md:text-lg' );
+                const maxLength = 150;
+                let descriptionText = post.yoast_head_json.description;
+                if (descriptionText.length > maxLength) {
+                    descriptionText = descriptionText.substring(0, maxLength) + '...';
+                }
+                descriptionElement.textContent = descriptionText;
+                divDescription.appendChild(descriptionElement);
+                textContainer.appendChild(divDescription);
+
+                const readButton = document.createElement('a');
+                readButton.classList.add('bg-customBlue', 'hover:bg-customOrange', 'dark:bg-customOrange', 'rounded-tr-lg', 'rounded-bl-lg', 'text-base', 'text-white', 'font-bold' ,'py-2', 'px-2', 'md:self-start', 'self-center' ,'dark:hover:bg-customBlue', 'transition', 'duration-300', 'self-start' );
+                readButton.href = '#'; 
+                readButton.textContent='Read Now';
+                readButton.onclick = function(){
+                    redirectToPostPage(post)
+                }
+                textContainer.appendChild(readButton);
+                
+                const cardsContainer = document.getElementById('blogPostsHome');
+                container.appendChild(textContainer)
+                cardsContainer.appendChild(container);
+            }
+            currentPosts += additionalPosts;
+        }
+    }
+    catch{
+        console.error('Erro ao exibir os posts:', error);
+    }
+    
+    showMorePosts();
+}
+
+    document.addEventListener("DOMContentLoaded", function (){
+
+      new TypeIt("#element", {
+        speed: 80,
+        loop: true,
+      })
+      .type("Entertaiment", {delay: 1000})
+      .delete()
+      .type("Superstars")
+      .pause(1200)
+      .go()
+
+      displayPostTrending();
+    })
+
+    const maxLength = 200;
+    let descriptionTextElements = document.querySelectorAll('.limitText');
+    
+    descriptionTextElements.forEach(element => {
+        let descriptionText = element.textContent;
+        let originalText = descriptionText; // Armazenar o texto original para restauração posterior
+    
+        if (descriptionText.length > maxLength) {
+            descriptionText = descriptionText.substring(0, maxLength) + '...';
+            element.textContent = descriptionText;
+        }
+    
+        // Encontrar o botão dentro da div atual
+        const seeMoreButton = element.nextElementSibling;
+    
+        let isExpanded = false; // Variável para rastrear se o texto está expandido ou não
+    
+        // Adicionar evento de clique ao botão
+        seeMoreButton.addEventListener('click', () => {
+            if (!isExpanded) {
+                // Se o texto não estiver expandido, exibir o texto completo e alterar o texto do botão para "See Less"
+                element.textContent = originalText;
+                seeMoreButton.textContent = 'See Less';
+            } else {
+                // Se o texto estiver expandido, reverter para o texto truncado e alterar o texto do botão para "See More"
+                element.textContent = descriptionText;
+                seeMoreButton.textContent = 'See More';
+            }
+            // Alternar o estado de expansão
+            isExpanded = !isExpanded;
+        });
+    });
+    
+    
+
+
+  </script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script> -->
+</body>
+
+</html>

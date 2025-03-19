@@ -1,0 +1,117 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+  /* Custom styles for hover effect */
+   .card:hover .image {
+    filter: blur(8px);
+  } 
+  .card:hover .overlay {
+    opacity: 1;
+    background: linear-gradient(to top, #fff 0%, #2500f8d6 1%, transparent 100%);
+    transition: 1s;
+  }
+  .card {
+    transition: transform 0.3s ease-in-out, z-index 0.3s;
+  }
+
+  .card:hover {
+    transform: scale(1.04); /* Aumenta o tamanho do card ao passar o mouse */
+    z-index: 1; /* Coloca o card sobre os outros */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra para dar destaque */
+  }
+
+  .space-left {
+    transition: margin 0.3s ease-in-out; /* Transição suave do gap */
+  }
+
+  .space-left:hover {
+  
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .space-right {
+    transition: margin 0.3s ease-in-out; /* Transição suave do gap */
+  }
+
+  .space-right:hover {
+  
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  #articleContainer ul{
+    padding-left: 20px;
+  }
+
+  #articleContainer li{
+    list-style: disc;
+    padding: 5px 0;
+  }
+
+  #articleContainer h4{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 0;
+  }
+
+  #articleContainer p{
+    text-align: justify !important;
+  }
+
+  .elementor-widget-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .space-last-card {
+    transition: margin 0.3s ease-in-out; /* Transição suave do gap */
+  }
+
+  .space-last-card:hover {
+  
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+
+    
+  .space-last-card-right {
+    transition: margin 0.3s ease-in-out; /* Transição suave do gap */
+  }
+
+  .space-last-card-right:hover {
+  
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  html{
+    scroll-behavior: smooth;
+    
+      }
+    
+  @media screen and (max-width: 767px) {
+    #articleContainer h4{
+      text-align: center;
+    }
+  }
+
+ /* Adicionado CSS para a animação de fade */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.testss{
+  max-height: auto;
+}
+
+.expand{
+  transition: max-height 0.8s ease;
+}

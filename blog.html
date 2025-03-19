@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <title>SuperStars</title>
+        <script>
+        tailwind.config = {
+        darkMode: 'class',
+          theme: {
+            extend: {
+              colors: {
+                customDarkTheme: '#1D2021',
+                customBlue: '#2600F8',
+                customCard: '#FAFDFF',
+                customBlack: '#343435',
+                customOrange: '#FB7300',
+                customGrey: '#898888',
+                customLightBlue: '#E8F5FF',
+                customSkyBlue: '#F2F9FF',
+              },
+                backgroundImage: {
+                    'heroLight': "url('./assets/bgHeroBlog.svg')",
+                    'heroBlack': "url('./assets/bgHeroBlogDark.svg')",
+                    'middleCard': "url('./assets/bgSectionMiddle.svg')",
+                    'bgMobileOrange': "url('./assets/bg-mobile-orange.png')",
+                    'bgMobileBlue': "url('./assets/bg-mobile-blue.png')",
+                    'menuIconBlue': "url ('./assets/menu-blue.svg')",
+                    'menuIconOrange': "url ('./assets/menu-orange.svg')",
+                },
+                fontFamily: {
+                    poppins: ['Poppins', 'sans-serif'],
+                },
+                container: {
+                    center: true,
+                },
+                variants: {
+                    extend: {
+                        backgroundImage: ['dark']
+                    }
+                },
+            },
+          },
+          screens: {
+            'sm': '640px',
+            // => @media (min-width: 640px) { ... }
+      
+            'md': '768px',
+            // => @media (min-width: 768px) { ... }
+      
+            'lg': '1024px',
+            // => @media (min-width: 1024px) { ... }
+      
+            'xl': '1280px',
+            // => @media (min-width: 1280px) { ... }
+      
+            '2xl': '1536px',
+            // => @media (min-width: 1536px) { ... }
+          }
+        }
+    </script>
+        <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box !important;
+        }
+
+        .swiper-button-next{
+            position: static;
+            background-color: #2600F8;
+            color: white;
+            border-radius: 100px;
+            padding: 22px;
+        }
+
+        .swiper-button-prev{
+            position: static;
+            background-color: #2600F8;
+            color: white;
+            border-radius: 100px;
+            padding: 22px;
+        }
+
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-family: swiper-icons;
+            font-size: 24px !important;
+            text-transform: none !important;
+            letter-spacing: 0;
+            font-variant: initial;
+            line-height: 1;
+        }
+
+        .swiper-button-prev, .swiper-rtl .swiper-button-next {
+            /* left: 0 !important; */
+            right: auto;
+        }
+
+        @media screen and (max-width: 767px) {
+
+            .swiper-button-next{
+                position: absolute;
+                top: 5%;
+                right: 30%;
+                background-color: #2600F8;
+                color: white;
+                border-radius: 100px;
+                padding: 22px;
+            }
+
+            .swiper-button-next:after, .swiper-button-prev:after {
+                font-family: swiper-icons;
+                font-size: 24px !important;
+                text-transform: none !important;
+                letter-spacing: 0;
+                font-variant: initial;
+                line-height: 1;
+            }
+
+            .swiper-button-prev{
+                position: absolute !important;
+                top: 5%;
+                left: 30%;
+                background-color: #2600F8;
+                color: white;
+                border-radius: 100px;
+                padding: 22px;
+            }
+
+            .swiper-button-prev, .swiper-rtl .swiper-button-next {
+            /* left: 0 !important; */
+            right: auto;
+        }
+        }
+
+
+    </style>
+    </head>
+
+    <body class="dark:bg-customDarkTheme font-poppins">
+
+        <nav class="bg-white  dark:bg-customBlack ">
+            <div
+                class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="./index.html"
+                    class="flex w-40 items-center space-x-3 rtl:space-x-reverse">
+                    <img id="logoHeader" src="assets/logo-superstars.svg"
+                        class="h-8" alt="Logo" />
+
+                </a>
+                <button>
+                    <img
+                        class="dark:bg-white md:block hidden bg-blue-800 rounded-md w-9/12"
+                        id="logoTheme" src alt>
+                </button>
+
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden "
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <img id="menu_orange" src="assets/menu_orange.png"
+                        class="h-8" alt="menu_orange" />
+                </button>
+                <div class="hidden w-full md:block md:w-auto"
+                    id="navbar-default">
+
+                    <ul
+                        class="font-medium flex  text-center flex-col gap-3 md:gap-0 p-4 md:p-5 mt-4  border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white  dark:bg-customBlack dark:border-gray-700">
+                        <li class="flex items-center justify-center">
+                            <button class="flex justify-center pb-2">
+                                <img
+                                    class="dark:bg-white bg-blue-800 rounded-md w-9/12 md:hidden"
+                                    id="navMobile" src alt>
+                            </button>
+                        </li>
+
+                        <li>
+                            <a href="./index.html"
+                                class="block py-2 px-2 font-semibold text-[18px] text-customBlue hover:text-white dark:hover:text-white dark:text-customOrange hover:bg-customOrange rounded-tr-lg rounded-bl-lg md:border-0"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="./index.html#aboutus"
+                                class="block py-2 px-2 font-semibold text-[18px] text-customBlue hover:text-white dark:hover:text-white dark:text-customOrange hover:bg-customOrange rounded-tr-lg rounded-bl-lg md:border-0">About
+                                us</a>
+                        </li>
+                        <li>
+                            <a href="./blog.html"
+                                class="block py-2 px-2 bg-orange-500 text-[18px] rounded-tr-lg rounded-bl-lg  text-white dark:text-blue">Blog</a>
+                        </li>
+
+                        <li>
+                            <a href="./standout.html"
+                                class="block py-2 px-2 font-semibold text-[18px] text-customBlue hover:text-white dark:hover:text-white dark:text-customOrange hover:bg-customOrange rounded-tr-lg rounded-bl-lg md:border-0">Partners</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main
+            class="md:p-12 text-center bg-heroLight dark:bg-heroBlack bg-customSkyBlue dark:bg-customBlack md:bg-cover bg-center bg-no-repeat h-auto md:py-36 py-10 flex items-center justify-center flex-col gap-16 ">
+            <div
+                class="flex flex-col items-center justify-center md:flex-row h-full ">
+                <div
+                    class="text flex-col md:gap-16 gap-8 h-full flex items-center justify-center md:px-0 px-4 md:w-5/6">
+                    <div
+                        class="flex flex-col md:flex-row items-center justify-between w-full md:gap-0 gap-8">
+                        <img class="w-6/12 md:w-1/6"
+                            src="./assets/Vector lefth.svg" alt>
+                        <h1 id="heroText"
+                            class="text-4xl md:text-6xl lg:text-7xl font-bold text-customBlack dark:text-white ">
+                        </h1>
+                        <img class="md:block hidden md:w-1/6"
+                            src="./assets/Vector rigth.svg" alt>
+                    </div>
+                    <h4
+                        class="text-md leading-7 md:px-0 px-5 md:text-2xl font-semibold text-customBlack dark:text-white">
+                        From strategic brand positioning to data-driven user
+                        acquisition and retention tactics, we're here to guide
+                        you every step of the way. Together, let's unlock the
+                        full potential of your gaming venture and dominate the
+                        digital landscape.
+                    </h4>
+                    <!-- SearchBar -->
+                    <!-- <form class="w-full mx-auto md:px-0 px-4">
+                        <label for="default-search"
+                            class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                        <div class="relative">
+                            <div
+                                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg
+                                    class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                </svg>
+                            </div>
+
+                            
+                            <input type="search" id="default-search"
+                                class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-customBlack dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-customOrange dark:focus:border-customOrange"
+                                placeholder="What you looking for?"
+                                required />
+                            <button type="submit"
+                                class="text-white absolute end-2.5 bottom-2.5 bg-customBlue hover:bg-blue-800 dark:bg-customOrange rounded-tr-lg rounded-bl-lg focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-customBlue dark:focus:ring-blue-800">Search</button> 
+                        </div>
+                    </form> -->
+                </div>
+
+            </div>
+        </main>
+
+        <section class="container py-8 md:py-0" id="trendings">
+            <div class="flex flex-col items-center ">
+                <div
+                    class="py-8 md:py-20 flex w-full md:items-center items-center  ">
+                    <h1
+                        class="xl:text-start text-center w-full text-4xl md:text-6xl font-bold text-customBlack dark:text-white"><span
+                            class="text-customBlue dark:text-customOrange">Trending</span>
+                        now</h1>
+
+                </div>
+                <div class="swiper mySwiper relative md:pb-12 md:pt-0 pt-20">
+                    <div class=" flex md:py-5 md:pt-8 justify-end gap-10">
+                        <div class="swiper-button-prev "></div>
+                        <div class="swiper-button-next "></div>
+                    </div>
+                    <div id="trendingPosts"
+                        class="swiper-wrapper w-96 md:w-[42rem] lg:w-[60rem] xl:w-[78rem] 2xl:w-[90rem] ">
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="bg-middleCard h-48 bg-cover mb-10 md:mt-16 mt-8 relative flex items-center md:justify-center">
+            <img class="absolute left-0" src="./assets/vectorLeft.svg" alt>
+            <img class="absolute right-0" src="./assets/vectorRight.svg" alt>
+            <h1
+                class="text-white text-3xl md:text-5xl px-20 text-center font-bold">
+                Knowledge is a key
+                that unlocks the
+                doors of success
+            </h1>
+        </section>
+
+        <section class="  relative" id="bestArticles">
+            <img
+                class="absolute ring-0 z-[-1] right-0 bottom-28 md:block hidden"
+                src="./assets/vectorOrange.svg" alt>
+            <div class="container">
+                <div class="flex flex-col items-center ">
+                    <div
+                        class="py-8 md:py-16 flex w-full md:items-start items-center">
+                        <h1
+                            class="text-4xl xl:text-left text-center md:text-6xl font-bold text-customBlack w-full dark:text-white"><span
+                                class="text-customOrange">Best</span> articles
+                        </h1>
+                    </div>
+                    <div class=" w-full md:block hidden">
+                        <div
+                            class="grid grid-cols-1 md:grid-cols-2 place-items-center px-8 items-center justify-center rounded-lg w-full dark:border-gray-700">
+                            <img id="mostRecentImagePost"
+                                class=" w-full rounded-t-lg h-full  md:rounded-lg"
+                                src="./assets/Card-4.svg" alt>
+                            <div
+                                class="flex h-full gap-4 w-full flex-col justify-around items-start p-8 leading-normal">
+                                <div class="flex flex-col gap-10">
+                                    <h5 id="mostRecentTitlePost"
+                                        class="text-2xl font-bold tracking-tight text-customBlack dark:text-white ">Improve
+                                        the Content Experience in your
+                                        Sportsbook in
+                                        7
+                                        Steps</h5>
+                                    <p id="mostRecentDescriptionPost"
+                                        class="leading-8 font-normal text-customBlack dark:text-white ">
+                                        In the competitive world of online
+                                        sportsbooks,
+                                        keeping your players engaged and loyal
+                                        is
+                                        crucial for success. While offering
+                                        competitive
+                                        odds and a wide range of betting options
+                                        is
+                                        essential, content plays a vital role in
+                                        attracting and retaining players. A
+                                        well-crafted
+                                        content strategy can...
+                                    </p>
+                                </div>
+                                <a href="#" id="readNowButtonRecent"
+                                    class="bg-customBlue hover:bg-customOrange dark:bg-customOrange rounded-tr-lg rounded-bl-lg text-base text-white font-bold py-2 px-3  dark:hover:bg-customBlue transition duration-300">
+                                    Read now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper mySwiper relative pb-12 md:pt-12 pt-20">
+                        <div class="swiper-button-next md:hidden"></div>
+                        <div class="swiper-button-prev md:hidden"></div>
+                        <div id="bestPosts"
+                            class="swiper-wrapper w-96 md:w-[42rem] lg:w-[60rem] xl:w-[78rem] 2xl:w-[90rem] ">
+
+                        </div>
+
+                    </div>
+
+                    <div class=" w-full md:block hidden pb-10">
+                        <div
+                            class="grid grid-cols-1 md:grid-cols-2 place-items-center px-8 items-center justify-center rounded-lg w-full dark:border-gray-700">
+                            <img id="lastImagePost"
+                                class=" w-full h-full "
+                                src="./assets/Card-2.png" alt>
+                            <div
+                                class="flex h-full w-full flex-col justify-around items-start p-8 gap-4 leading-normal">
+                                <div class="flex flex-col gap-10">
+                                    <h5 id="lastTitlePost"
+                                        class="text-2xl font-bold tracking-tight text-customBlack dark:text-white ">The
+                                        Complete Guide to Understanding the
+                                        iGaming Business</h5>
+                                    <p id="lastDescriptionPost"
+                                        class="leading-8 font-normal text-customBlack dark:text-white ">
+                                        In the fast-paced world of online
+                                        gaming, the iGaming industry has emerged
+                                        as a dynamic and lucrative sector,
+                                        offering a wide range of gaming options
+                                        to players worldwide. From online
+                                        casinos and sports betting platforms to
+                                        virtual reality gaming experiences, the
+                                        iGaming business encompasses a diverse
+                                        array of...
+                                    </p>
+                                </div>
+                                <a href="#" id="readNowButtonLast"
+                                    class="bg-customBlue hover:bg-customOrange dark:bg-customOrange rounded-tr-lg rounded-bl-lg text-base text-white font-bold py-2 px-3  dark:hover:bg-customBlue transition duration-300">
+                                    Read now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter"
+            class="flex items-center bg-customSkyBlue dark:bg-customBlack flex-col justify-between md:mt-0 md:mb-0 px-3 py-20 gap-12">
+            <div
+                class="flex md:flex-row flex-col items-center md:justify-around  justify-center pr-0 gap-8 container">
+                <h2
+                    class="text-4xl md:text-6xl font-bold md:text-start text-center text-black dark:text-white ">
+                    Stay
+                    <span
+                        class="text-customBlue dark:text-customOrange font-bold">
+                        tuned!
+                    </span>
+                </h2>
+                <p
+                    class="text-center md:text-end dark:text-white w-5/6 md:w-2/6">
+                    Get ready to level up your gaming experience with our
+                    exclusive newsletter! From groundbreaking releases to
+                    insider tips and industry insights, we've got you covered.
+                    Don't miss out - stay tuned for all the latest iGames news!
+                </p>
+            </div>
+            <div
+                class=" container w-full md:w-3/6 ">
+                <h1
+                    class="text-customBlack md:text-left text-center dark:text-white text-3xl font-bold pb-8">Newsletter
+                </h1>
+                <div
+                    class="px-10 md:px-0 flex flex-col gap-3 md:justify-start md:items-start justify-center items-center">
+                    <div class=" w-full flex items-center md:flex-row flex-col">
+                        <div class="w-full">
+                            <label for="input-group-1"
+                                class="block mb-4 text-sm font-medium md:text-left text-center text-customBlack dark:text-white">Valid
+                                email</label>
+                            <div class="relative mb-6 ">
+                                <div
+                                    class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                                    <svg
+                                        class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="currentColor" viewBox="0 0 20 16">
+                                        <path
+                                            d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+                                        <path
+                                            d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+                                    </svg>
+                                </div>
+                                <input type="text" id="input-group-1"
+                                    class="bg-gray-50  w-full shadow text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="name@email.com">
+                            </div>
+                        </div>
+                        <button
+                            class="bg-customBlue dark:bg-customOrange mx-2 rounded-tr-lg rounded-bl-lg text-lg text-white font-bold py-2 px-3  hover:bg-customBlue transition duration-300">
+                            Subscribe
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <footer
+            class="bg-white dark:bg-customDarkTheme px-10 py-20 flex items-center flex-col md:flex-row justify-around ">
+            <div class="flex flex-col items-center gap-3">
+                <img id="logoFooter"
+                    src="assets/logo-superstars.svg"
+                    class="h-8 w-2/3" alt=" Logo" />
+                <span class="text-base text-customBlack dark:text-white">© 2024
+                    All rights reserved</span>
+            </div>
+            <div class="flex flex-col gap-3 mt-3 items-center ">
+                <span
+                    class="text-3xl font-bold text-customBlack dark:text-white">Follow
+                    us</span>
+                <a target="_blank" id="link-linkedin"
+                    href="https://www.linkedin.com/company/superstars-entertainment/">
+                    <img src="./assets/linkedin-dark.svg" alt>
+                </a>
+            </div>
+        </footer>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script src="script.js"></script>
+
+        <script>
+
+
+            darkMode();
+            isDarkModeActive();
+
+            function atualizarImagemTema() {
+                const imagemLinkedin = document.querySelector('#link-linkedin img');
+                const logoTheme = document.getElementById('logoTheme');
+                const ThemeNav = document.getElementById('navMobile');
+                const isDarkMode = document.documentElement.classList.contains('dark');
+                const logoHeader = document.getElementById('logoHeader');
+                const logoFooter = document.getElementById('logoFooter');
+                const menu_orange = document.getElementById('menu_orange');
+
+                if (isDarkMode) {
+                    imagemLinkedin.src = './assets/linkedin-light.svg';
+                    logoHeader.src = './assets/logo-superstars-white.svg';
+                    logoTheme.src = './assets/white.svg';
+                    logoFooter.src = './assets/logo-superstars-orange.svg';
+                    menu_orange.src = './assets/menu-orange.svg';
+                    ThemeNav.src = './assets/white.svg';
+                } else {
+                    imagemLinkedin.src = './assets/linkedin-dark.svg';
+                    logoHeader.src = './assets/logo-superstars.svg';
+                    logoTheme.src = './assets/dark.svg';
+                    logoFooter.src = './assets/logo-superstars.svg';
+                    menu_orange.src = './assets/menu-blue.svg';
+                    ThemeNav.src = './assets/dark.svg';
+                }
+            }
+
+
+            async function displayMostRecentPost(posts){
+                try {
+                    const mostRecentPost = posts;
+                    const mostRecentTitlePost = document.getElementById('mostRecentTitlePost');
+                    const mostRecentDescriptionPost = document.getElementById('mostRecentDescriptionPost');
+                    const mostRecentImagePost = document.getElementById('mostRecentImagePost');
+                    const readNowButtonRecent = document.getElementById('readNowButtonRecent');
+
+                    mostRecentTitlePost.textContent = mostRecentPost.yoast_head_json.title.replace(/\u00A0/g, ' ');
+                    mostRecentDescriptionPost.textContent = mostRecentPost.yoast_head_json.description;
+                    mostRecentImagePost.src = mostRecentPost.yoast_head_json.og_image[0].url;
+                    readNowButtonRecent.onclick = function() {
+                        redirectToPostPage(mostRecentPost);
+                    }
+                    console.log(mostRecentImagePost.src);
+                }
+                catch{
+                    console.error('Erro ao exibir os posts:', error);
+                }
+            }
+
+            async function displayLastPost(posts){
+                try {
+                    const lastPost = posts;
+                    const lastTitlePost = document.getElementById('lastTitlePost');
+                    const lastDescriptionPost = document.getElementById('lastDescriptionPost');
+                    const lastImagePost = document.getElementById('lastImagePost');
+                    const readNowButtonLast = document.getElementById('readNowButtonLast');
+
+                    lastTitlePost.textContent = lastPost.yoast_head_json.title.replace(/\u00A0/g, ' ');
+                    lastDescriptionPost.textContent = lastPost.yoast_head_json.description;
+                    lastImagePost.src = lastPost.yoast_head_json.og_image[0].url;
+                    readNowButtonLast.onclick = function(){
+                        redirectToPostPage(lastPost)
+                    }
+                    console.log(mostRecentImagePost.src);
+                }
+                catch{
+                    console.error('Erro ao exibir os posts:', error);
+                }
+            }
+
+            async function displayPostTrending(posts) {
+                try{
+
+                    let currentPosts = 0;
+                
+                    function showMorePosts() {
+                        let additionalPosts = 10; // Número de postagens adicionais a serem mostradas ao clicar em "View More"
+                        for (let i = currentPosts; i < currentPosts + additionalPosts && i < posts.length; i++) {
+                            const post = posts[i];
+                            const container = document.createElement('div');
+                            container.classList.add('rounded-lg', 'flex', 'flex-col', 'w-full','swiper-slide', '!items-center', '!justify-center', 'w-screen' );
+
+                            const imageElement = document.createElement('img');
+                            imageElement.id = 'photoPost';
+                            imageElement.classList.add('w-full', 'rounded', 'h-72', 'object-cover');
+                            imageElement.src = post.yoast_head_json.og_image[0].url;
+                            imageElement.alt = 'news image';
+                            container.appendChild(imageElement);
+                
+                            const titleElement = document.createElement('h3');
+                            titleElement.id = 'titlePost';
+                            titleElement.classList.add('font-bold', 'text-black', 'text-lg', 'md:text-lg', 'p-2', 'dark:text-white');
+                            titleElement.textContent = post.yoast_head_json.title.replace(/\u00A0/g, ' ');
+                            container.appendChild(titleElement);
+
+                            const divDescription = document.createElement('div');
+                            divDescription.classList.add('w-full' ,'h-auto', 'flex', 'items-start', 'p-2', 'py-6' ,'text-justify');
+                            const descriptionElement = document.createElement('p');
+                            descriptionElement.id = 'descriptionPost';
+                            descriptionElement.classList.add('text-black', 'text-base', 'dark:text-white');
+                            const maxLength = 150;
+                            let descriptionText = post.yoast_head_json.description;
+                            if (descriptionText.length > maxLength) {
+                                descriptionText = descriptionText.substring(0, maxLength) + '...';
+                            }
+                            descriptionElement.textContent = descriptionText;
+                            divDescription.appendChild(descriptionElement);
+                            container.appendChild(divDescription);
+
+                            const readButton = document.createElement('a');
+                            readButton.classList.add('bg-customBlue', 'hover:bg-customOrange', 'dark:bg-customOrange', 'rounded-tr-lg', 'rounded-bl-lg', 'text-base', 'text-white', 'font-bold' ,'py-2', 'px-3', 'dark:hover:bg-customBlue', 'transition', 'duration-300', 'md:self-start', 'self-center' );
+                            readButton.href = '#'; 
+                            readButton.textContent='Read Now';
+                            readButton.onclick = function(){
+                                redirectToPostPage(post)
+                            }
+                            container.appendChild(readButton);
+                
+                            const cardsContainer = document.getElementById('trendingPosts');
+                            cardsContainer.appendChild(container);
+                        }
+                        currentPosts += additionalPosts;
+                
+                    }
+                }
+                catch{
+                    console.error('Erro ao exibir os posts:', error);
+                }
+                
+                showMorePosts();
+            }
+
+            async function displayPostsBest(posts) {
+                try{
+                    let currentPosts = 1;
+                    const additionalPosts = 3;
+                
+                    function showMorePosts() {
+                        for (let i = currentPosts; i < currentPosts + additionalPosts && i - posts.length; i++) {
+                            const post = posts[i];
+                            const container = document.createElement('div');
+                            container.classList.add('rounded-lg', 'flex', 'flex-col', 'w-full','swiper-slide', '!items-center', '!justify-center', 'w-screen' );
+
+                            const imageElement = document.createElement('img');
+                            imageElement.id = 'photoPost';
+                            imageElement.classList.add('w-full', 'rounded', 'h-72', 'object-cover');
+                            imageElement.src = post.yoast_head_json.og_image[0].url;
+                            imageElement.alt = 'news image';
+                            container.appendChild(imageElement);
+                
+                            const titleElement = document.createElement('h3');
+                            titleElement.id = 'titlePost';
+                            titleElement.classList.add('font-bold', 'text-black', 'text-lg', 'md:text-lg', 'p-2', 'dark:text-white');
+                            titleElement.textContent = post.yoast_head_json.title.replace(/\u00A0/g, ' ');
+                            container.appendChild(titleElement);
+
+                            const divDescription = document.createElement('div');
+                            divDescription.classList.add('w-full' ,'h-auto', 'flex', 'items-start', 'p-2', 'py-6' ,'text-justify');
+                            const descriptionElement = document.createElement('p');
+                            descriptionElement.id = 'descriptionPost';
+                            descriptionElement.classList.add('text-black', 'text-base', 'dark:text-white');
+                            const maxLength = 150;
+                            let descriptionText = post.yoast_head_json.description;
+                            if (descriptionText.length > maxLength) {
+                                descriptionText = descriptionText.substring(0, maxLength) + '...';
+                            }
+                            descriptionElement.textContent = descriptionText;
+                            divDescription.appendChild(descriptionElement);
+                            container.appendChild(divDescription);
+                            
+                            const readButton = document.createElement('a');
+                            readButton.classList.add('bg-customBlue', 'hover:bg-customOrange', 'dark:bg-customOrange', 'rounded-tr-lg', 'rounded-bl-lg', 'text-base', 'text-white', 'font-bold' ,'py-2', 'px-3', 'dark:hover:bg-customBlue', 'transition', 'duration-300', 'md:self-start', 'self-center' );
+                            readButton.href = '#'; 
+                            readButton.textContent='Read Now';
+                            readButton.onclick = function(){
+                                redirectToPostPage(post)
+                            }
+                            container.appendChild(readButton);
+                
+                            const cardsContainer = document.getElementById('bestPosts');
+                            cardsContainer.appendChild(container);
+                        }
+                        currentPosts += additionalPosts;
+                
+                    }
+                }
+                catch{
+                    console.error('Erro ao exibir os posts:', error);
+                }
+                
+                showMorePosts();
+            }
+
+
+            var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 80,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+            "640": {
+            slidesPerView: 1,
+            spaceBetween: 40,
+            },
+            "768": {
+            slidesPerView: 2,
+            spaceBetween: 50,
+            },
+            "1024": {
+            slidesPerView: 2,
+            spaceBetween: 60,
+            },
+            "1440": {
+            slidesPerView: 3,
+            spaceBetween: 80,
+            },
+        },
+            });
+
+  
+
+            document.addEventListener("DOMContentLoaded", function (){
+                new TypeIt("#heroText", {
+                  speed: 50,
+                  loop: true,
+                })
+                .type("Dive into to our blog", {delay: 1000})
+                .delete()
+                .go()
+              })
+            
+
+            displayAllPosts(); 
+
+        </script>
+    </body>
+</html>
