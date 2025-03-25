@@ -4,7 +4,7 @@ body {
 
   /* Custom styles for hover effect */
    .card:hover .image {
-    filter: blur(15px);
+    filter: blur(8px);
   } 
   .card:hover .overlay {
     opacity: 1;
