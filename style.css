@@ -4,11 +4,11 @@ body {
 
   /* Custom styles for hover effect */
    .card:hover .image {
-    filter: blur(8px);
+    filter: blur(15px);
   } 
   .card:hover .overlay {
     opacity: 1;
-    background: linear-gradient(to top, #fff 0%, #2500f8d6 1%, transparent 100%);
+    background: linear-gradient(to top, #000000bd 0%, #000000d8 0%, transparent 100%);
     transition: 1s;
   }
   .card {
